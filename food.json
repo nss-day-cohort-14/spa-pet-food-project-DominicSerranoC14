@@ -1,0 +1,41 @@
+{
+	"dogBrands": [{
+			"name": "Brand 1",
+			"types": [{
+				"type": "wet",
+				"volumes": [{
+					"name": "6oz",
+					"price": 6.01
+				}, {
+					"name": "8oz",
+					"price": 8.01
+				}]
+			}]
+		}, {
+			"name": "Brand 2",
+			"types": [{
+				"type": "dry",
+				"volumes": [{
+					"name": "10oz",
+					"price": 10.01
+				}, {
+					"name": "12oz",
+					"price": 12.01
+				}]
+			}]
+		}, {
+			"name": "Brand 3",
+			"types": [{
+				"type": "puppy",
+				"volumes": [{
+					"name": "14oz",
+					"price": 14.01
+				}, {
+					"name": "16oz",
+					"price": 16.01
+				}]
+			}]
+		}
+
+	]
+}

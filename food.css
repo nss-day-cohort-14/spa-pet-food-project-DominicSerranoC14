@@ -1,0 +1,46 @@
+    /*begin base style  */
+
+p {
+  display: inline-block;
+}
+
+/***********begin table styling for dog food */
+
+#table {
+  display: flex;
+  flex-direction: row;
+  /*width: 100%;*/
+}
+
+#output-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /*width: %;*/
+}
+
+.row {
+  border: 1px solid black;
+  display: flex;
+  flex: 1;
+}
+
+.row p {
+  border: 1px solid black;
+  flex: 1;
+  margin: 0;
+}
+
+.dog-food {
+  text-align: center;
+  font-size: 20px;
+}
+
+
+/***********begin table styling for dog food */
