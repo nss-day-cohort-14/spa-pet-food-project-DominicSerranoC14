@@ -1,26 +1,17 @@
-    /*begin base style  */
+/*** begin base styles ***/
 
 p {
-  display: inline-block;
+  display: block;
+  text-align: center;
 }
 
-/***********begin table styling for dog food */
-
-#table {
-  display: flex;
-  flex-direction: row;
-  /*width: 100%;*/
-}
-
-#output-div {
-  display: flex;
-  flex-direction: column;
+div {
+  text-align: center;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -36,10 +27,34 @@ p {
   margin: 0;
 }
 
-.dog-food {
-  text-align: center;
-  font-size: 20px;
+.col {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
+/*** begin table styling for dog food ****/
 
-/***********begin table styling for dog food */
+#dog-table {
+  display: flex;
+  flex-direction: row;
+}
+
+#output-div {
+  display: flex;
+  flex-direction: column;
+}
+
+/*** begin table styling for cat food ***/
+
+#cat-table {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: 10rem;
+}
+
+#cat-table div {
+  display: inline;
+}

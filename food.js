@@ -35,6 +35,15 @@ var outputDiv = document.getElementById('output-div');
 //get reference to output div for dog food
 var outputCatDiv = document.getElementById('outputCatDiv');
 
+//refernce to grab catfood brand div
+var catBrands = document.getElementById('cat-brands');
+
+//refernce to grab catfood brand div
+var catBreeds = document.getElementById('cat-breeds');
+
+//refernce to grab catfood brand div
+var catVolumes = document.getElementById('cat-volumes');
+
 
 
 //define handleDogFoodPrint function
@@ -62,27 +71,34 @@ function handleDogFoodPrint() {
 //define handleCatFoodPrint function
 function handleCatFoodPrint() {
   var data = JSON.parse(event.target.responseText);
-  var htmlString = "";
+  var brandString= "";
+  var breedString= "";
+  var volString= "";
+
 
   for ( var i = 0; i < data.catBrands.length; i++ ) {
-    htmlString += `<div class="col">`;
-    htmlString += `<p>${data.catBrands[i].name}</p>`;
-    htmlString += `</div>`;
-    for ( var j = 0; j < data.catBrands[i].breeds.length; j++ ) {
-      htmlString += `<div class="col">`;
-      htmlString += `<p>${data.catBrands[i].breeds[j]}</p>`;
-      htmlString += `</div>`;
+    var currentBrand = data.catBrands[i];
+    brandString += `${currentBrand.name}<hr>`;
 
+    for ( var j = 0; j < currentBrand.breeds.length; j++ ) {
+      breedString += currentBrand.breeds[j] + ' | ';
     }//end second for loop
-    for ( var k = 0; k < data.catBrands[i].volumes.length; k++ ) {
-      htmlString += `<div class="col">`;
-      htmlString += `<p>${data.catBrands[i].volumes[k].name}`;
-      htmlString += `${data.catBrands[i].volumes[k].size}`;
-      htmlString += `${data.catBrands[i].volumes[k].price}</p>`;
-      htmlString += `</div>`;
+
+    for ( var k = 0; k < currentBrand.volumes.length; k++ ) {
+      var currentVolume = currentBrand.volumes[k];
+      volString += `${currentVolume.name}: `;
+      volString += `${currentVolume.size}, `;
+      volString += `${currentVolume.price} | `;
     }//end third for loop
+
+
+  breedString += `<hr><br>`;
+  brandString += `<br>`;
+  volString += `<hr>`;
+
+  catVolumes.innerHTML = '<div><p>Price and Size</div><hr>' + volString;
+  catBreeds.innerHTML = '<div><p>Breeds</div><hr><br>' + breedString;
+  catBrands.innerHTML = '<div><p>Brands</div><hr><br>' + brandString;
   }//end of first for loop
-  console.log(htmlString);
-  outputCatDiv.innerHTML = htmlString;
 
 }//end of handleCatFoodPrint function
