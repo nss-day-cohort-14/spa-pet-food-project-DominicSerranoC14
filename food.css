@@ -1,0 +1,60 @@
+/*** begin base styles ***/
+
+p {
+  display: block;
+  text-align: center;
+}
+
+div {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.row {
+  border: 1px solid black;
+  display: flex;
+  flex: 1;
+}
+
+.row p {
+  border: 1px solid black;
+  flex: 1;
+  margin: 0;
+}
+
+.col {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/*** begin table styling for dog food ****/
+
+#dog-table {
+  display: flex;
+  flex-direction: row;
+}
+
+#output-div {
+  display: flex;
+  flex-direction: column;
+}
+
+/*** begin table styling for cat food ***/
+
+#cat-table {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: 10rem;
+}
+
+#cat-table div {
+  display: inline;
+}
